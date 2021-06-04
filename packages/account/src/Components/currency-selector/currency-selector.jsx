@@ -30,6 +30,7 @@ const CurrencySelector = ({
     selected_step_ref,
     onSubmitEnabledChange,
     has_wallet_account,
+    residence,
     ...props
 }) => {
     const { is_dashboard } = React.useContext(PlatformContext);
@@ -128,6 +129,7 @@ const CurrencySelector = ({
                                                 label={localize('Fiat currencies')}
                                                 is_fiat
                                                 value={values.currency}
+                                                is_IOM_MX_Clients={residence === 'im' ? '' : 'or create an MT5 account'}
                                                 error={errors.currency}
                                                 touched={touched.currency}
                                                 item_count={reorderCurrencies(fiat).length}

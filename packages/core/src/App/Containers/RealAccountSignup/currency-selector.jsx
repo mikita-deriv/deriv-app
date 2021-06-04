@@ -11,4 +11,5 @@ export default connect(({ client, ui }) => ({
     resetRealAccountSignupParams: ui.resetRealAccountSignupParams,
     selectable_currencies: client.selectable_currencies,
     real_account_signup_target: ui.real_account_signup_target,
+    residence: client.residence,
 }))(CurrencySelector);
